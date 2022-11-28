@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from './Slider/Slider';
 import pepoleImg from '../../assets/zana-latif-TYy4lc85xWo-unsplash.jpg'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -20,6 +21,11 @@ const Home = () => {
                      Their back-end work-flow is like the iceberg under the sea,
                      you just see the tip floating above the ocean.
                      <br/> But behind the scenes there is a lot of work that needs to be executed and for multiple clients.</small></p>
+                     <Link to='category'>
+                        <button className='btn btn-outline btn-warning m-5'>
+                            category
+                        </button>
+                     </Link>
                 </div>
                 <div>
                     <img className='w-9/12 rounded' src={pepoleImg} alt="" />
