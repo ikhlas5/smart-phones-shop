@@ -1,9 +1,12 @@
 import React from 'react';
 import Slider from './Slider/Slider';
 import pepoleImg from '../../assets/zana-latif-TYy4lc85xWo-unsplash.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import SingalCategory from './CategoryPhones/SingalCategory/SingalCategory';
+
 
 const Home = () => {
+    const categoriesPhones=useLoaderData();
     return (
         <div>
             <div className='w-1/3 m-5 mx-auto'>
@@ -31,8 +34,36 @@ const Home = () => {
                     <img className='w-9/12 rounded' src={pepoleImg} alt="" />
                 </div>
             </div>
+            <div>
+            {
+                categoriesPhones.map(categoriesPhone=><SingalCategory
+                key={categoriesPhone._id}
+                categoriesPhone={categoriesPhone}
+                ></SingalCategory>)
+            }
+            </div>
         </div>
     );
 };
 
 export default Home;
+
+//**
+// * import React from 'react';
+
+// const SingalCategory = ({categoriesPhone}) => {
+//     const{image,category_name}=categoriesPhone;
+//     return (
+//         <div className="card w-96 bg-base-100 shadow-xl">
+//         <figure><img src={image} alt="Shoes" /></figure>
+//         <div className="card-body">
+//           <h2 className="card-title">{category_name}</h2>
+//           <div className="card-actions justify-end">
+//             <button className="btn btn-outline btn-primary">Buy Now</button>
+//           </div>
+//         </div>
+//       </div>
+//     );
+// };
+
+// export default SingalCategory;
