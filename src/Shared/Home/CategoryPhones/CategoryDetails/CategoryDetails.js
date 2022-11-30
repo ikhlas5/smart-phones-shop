@@ -1,4 +1,5 @@
 import React from 'react';
+import PrimaryButton from '../../../../Componets/PrimaryButton/PrimaryButton';
 
 const CategoryDetails = ({data}) => {
     const {image,location,name,original_price,ratting,resale_price,view,years_of_use}=data;
@@ -14,7 +15,9 @@ const CategoryDetails = ({data}) => {
           <p>Ratting: {ratting}</p>
           <p>View: {view}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-outline btn-primary">Buy Now</button>
+            <label htmlFor="booking-modal">
+            <PrimaryButton>Buy Now</PrimaryButton>
+            </label>
           </div>
         </div>
       </div>
