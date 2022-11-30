@@ -7,7 +7,7 @@ import SingalCategory from './CategoryPhones/SingalCategory/SingalCategory';
 
 const Home = () => {
     const categoriesPhones=useLoaderData();
-    console.log(categoriesPhones);
+    // console.log(categoriesPhones);
     return (
         <div>
             <div className='w-1/3 m-5 mx-auto'>
