@@ -7,6 +7,7 @@ import SingalCategory from './CategoryPhones/SingalCategory/SingalCategory';
 
 const Home = () => {
     const categoriesPhones=useLoaderData();
+    console.log(categoriesPhones);
     return (
         <div>
             <div className='w-1/3 m-5 mx-auto'>
@@ -34,7 +35,7 @@ const Home = () => {
                     <img className='w-9/12 rounded' src={pepoleImg} alt="" />
                 </div>
             </div>
-            <div>
+            <div className='grid md:grid-cols-3 gap-4 m-5'>
             {
                 categoriesPhones.map(categoriesPhone=><SingalCategory
                 key={categoriesPhone._id}

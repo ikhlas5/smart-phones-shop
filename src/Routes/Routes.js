@@ -16,7 +16,12 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch(`http://localhost:5000/allPhonesCategory`)
+                loader:()=>fetch(`http://localhost:5000/categoryPhones`)
+            },
+            {
+                path:'/home',
+                element:<Home></Home>,
+                loader:()=>fetch(`http://localhost:5000/categoryPhones`)
             },
             {
                 path:'/blogs',
@@ -27,11 +32,11 @@ const router = createBrowserRouter([
                 element:<CategoryPhone></CategoryPhone>,
                 loader:({params})=>fetch(`http://localhost:5000/allPhonesCategory/${params.id}`)
             },
-            {
-                path:'category',
-                element:<AllPhones></AllPhones>,
-                loader:()=>fetch(`http://localhost:5000/allPhones`)
-            },
+            // {
+            //     path:'category',
+            //     element:<AllPhones></AllPhones>,
+            //     loader:()=>fetch(`http://localhost:5000/allPhones`)
+            // },
             {
                 path:'/login',
                 element:<Login></Login>
