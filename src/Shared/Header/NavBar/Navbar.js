@@ -15,20 +15,19 @@ const Navbar = () => {
   
     const menuItems = <React.Fragment>
         <li><Link to="/">Home</Link></li>
-        {/* <li><Link to="/category">Category</Link></li> */}
-        <li><Link to="/addProduct">AddProduct</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/blogs">Blog</Link></li>
+        
         {
           user?.email?
           <>
+          <li><Link to="/dashboard">Dashboard</Link></li>
           <li><button onClick={handleLogout}>LogOut</button></li>
           </>
           :
           <li><Link to="/login">Login</Link></li>
         }
-        {/* <li><Link to="/login">Login</Link></li> */}
+  
         <li><Link to="/signUp">SignUp</Link></li>
+        <li><Link to="/blogs">Blog</Link></li>
     </React.Fragment>
     return (
         <div className="navbar bg-base-100">
