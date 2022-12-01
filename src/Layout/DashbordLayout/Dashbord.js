@@ -18,7 +18,13 @@ const Dashbord = () => {
     <ul className="menu p-4 w-80 bg-base-100 text-base-content">
      
       <li>
+        <Link to='/dashboard/allusers'>All Users</Link>
+      </li>
+      <li>
         <Link to='/dashboard/myorder'>My Orders</Link>
+      </li>
+      <li>
+        <Link to='/dashboard/mangeSeller'>Mange Seller</Link>
       </li>
       <li>
         <Link to='/dashboard/addProduct'>Add Product</Link>

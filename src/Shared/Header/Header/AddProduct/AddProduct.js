@@ -33,7 +33,7 @@ const AddProduct = () => {
                     mobileNumber:data.mobileNumber,
                     location:data.location};
 // database include
-        fetch('http://localhost:5000/AddProducts', {
+        fetch('https://smart-phones-shop-server.vercel.app/AddProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

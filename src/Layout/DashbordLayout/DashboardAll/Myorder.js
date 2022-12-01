@@ -4,8 +4,9 @@ import { AuthContext } from '../../../Shared/UserContext/UserContext';
 const Myorder = () => {
     const{user}=useContext(AuthContext);
     const[orders,setOrders]=useState();
+    console.log(orders)
     useEffect(()=>{
-        fetch(`http://localhost:5000/booking?email=${user?.email}`)
+        fetch(`https://smart-phones-shop-server.vercel.app/booking?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[user?.email])

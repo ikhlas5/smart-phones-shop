@@ -3,6 +3,7 @@ import AllPhones from "../Componets/AllPhones/AllPhones";
 import Login from "../FromeInfo/Login/Login";
 import SignUp from "../FromeInfo/SignUp/SignUp";
 import AllUsers from "../Layout/DashbordLayout/DashboardAll/AllUsers/AllUsers";
+import ManageSeller from "../Layout/DashbordLayout/DashboardAll/MangeSeller/MangeSeller";
 import Myorder from "../Layout/DashbordLayout/DashboardAll/Myorder";
 import Dashbord from "../Layout/DashbordLayout/Dashbord";
 import Main from "../Layout/Main";
@@ -22,12 +23,12 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch(`http://localhost:5000/categoryPhones`)
+                loader:()=>fetch(`https://smart-phones-shop-server.vercel.app/categoryPhones`)
             },
             {
                 path:'/home',
                 element:<Home></Home>,
-                loader:()=>fetch(`http://localhost:5000/categoryPhones`)
+                loader:()=>fetch(`https://smart-phones-shop-server.vercel.app/categoryPhones`)
             },
             {
                 path:'/blogs',
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             {
                 path:'categories/:id',
                 element:<CategoryPhone></CategoryPhone>,
-                loader:({params})=>fetch(`http://localhost:5000/allPhones/${params.id}`)
+                loader:({params})=>fetch(`https://smart-phones-shop-server.vercel.app/allPhones/${params.id}`)
             },
             {
                 path:'/login',
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/allusers',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            {
+                path:'/dashboard/mangeSeller',
+                element:<ManageSeller></ManageSeller>
             },
 
         ]

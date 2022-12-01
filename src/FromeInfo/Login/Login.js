@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import useToken from '../../hooks/useToken';
 import { AuthContext } from '../../Shared/UserContext/UserContext';
 import { FaGoogle } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -30,6 +31,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                toast('User login Successfully.')
                 setLoginUserEmail(data.email);
             })
             .catch(error => {
@@ -90,96 +92,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-
-
-
-
-// import { GoogleAuthProvider } from 'firebase/auth';
-// import React, { useContext, useState } from 'react';
-// import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { AuthContext } from '../../Shared/UserContext/UserContext';
-// import { FaGoogle } from 'react-icons/fa';
-// import img from '../../assets/v-a-tao-9TqCQNs0kTg-unsplash.jpg'
-
-// const Login = () => {
-
-//     const {userSingIn,providerLogIn,providerGitHub} = useContext(AuthContext);
-//     const [error, setError] = useState(``);
-
-//     const navigate=useNavigate();
-//     const location=useLocation();
-//     const from=location.state?.from?.pathname || '/';
-//     const googleProvider = new GoogleAuthProvider();
-    
-
-//     const handleLogin = event =>{
-//         event.preventDefault();
-//         const form = event.target;
-//         const email = form.email.value;
-//         const password = form.password.value;
-
-//         userSingIn(email, password)
-//         .then( result => {
-//             const user = result.user;
-//             console.log(user);
-//             form.reset();
-//             setError('')
-//             navigate(from,{replace:true})
-//         })
-//         .then(error => {
-//             console.log(error)
-//             setError(error.message)
-//         });
-//     };
-
-//     const googleSingIn =() => {
-//         providerLogIn(googleProvider )
-//         .then(res => {
-//             const user = res.user;
-//             navigate('/')
-//             // console.log(user);
-//         })
-//         .catch(error => {
-//             console.error(error);
-//         })
-//     }
-
-//     return (
-//         <div className="hero w-full my-20">
-//         <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
-//             <div className="text-center lg:text-left">
-//                 <img className='w-3/4' src={img} alt="" />
-//             </div>
-//             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
-//                 <h1 className="text-5xl text-center font-bold">Login</h1>
-//                 <form onSubmit={handleLogin} className="card-body">
-//                     <div className="form-control">
-//                         <label className="label">
-//                             <span className="label-text">Email</span>
-//                         </label>
-//                         <input type="text" name='email' placeholder="email" className="input input-bordered" required/>
-//                     </div>
-//                     <div className="form-control">
-//                         <label className="label">
-//                             <span className="label-text">Password</span>
-//                         </label>
-//                         <input type="text" name='password' placeholder="password" className="input input-bordered" required/>
-                        
-//                     </div>
-//                     <div className="form-control mt-6">
-//                         <input className="btn btn-primary" type="submit" value="Sign Up" />
-//                     </div>
-//                 </form>
-//                 <p className='text-center'>Create a new Account? <Link className='text-orange-600 font-bold' to="/signup">SignUp</Link> </p>
-//             <button onClick={googleSingIn} className='flex items-center mx-auto '><FaGoogle className='mr-2'></FaGoogle>Google</button>
-//             </div>
-//         </div>
-//     </div>
-//     );
-// };
-
-// export default Login;

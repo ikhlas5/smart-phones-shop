@@ -26,7 +26,7 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                toast('User Created Successfully.')
+                toast.success('User Created Successfully.')
                 const userInfo = {
                     displayName: data.name
                 }
@@ -44,7 +44,7 @@ const SignUp = () => {
 
     const saveUser = (name, email,role) =>{
         const user ={name, email,role:role};
-        fetch('http://localhost:5000/users', {
+        fetch('https://smart-phones-shop-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
