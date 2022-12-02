@@ -20,7 +20,7 @@ const SignUp = () => {
         navigate('/');
     }
 
-    const handleSignUp = (data) => {
+    const handleSignUp = (data) => { 
         setSignUPError('');
         createUser(data.email, data.password)
             .then(result => {
@@ -75,11 +75,6 @@ const SignUp = () => {
                         .catch(err => console.log(err));
                 })
 
-                // .then(res => {
-                //     const user = res.user;
-                //     navigate('/')
-                //     console.log(user);
-                // })
                 .catch(error => {
                     console.log(error)
                     setSignUPError(error.message)
