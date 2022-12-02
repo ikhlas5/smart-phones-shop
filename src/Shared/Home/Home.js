@@ -16,18 +16,14 @@ const Home = () => {
             </div>
             <div className='grid md:grid-cols-2 m-10'>
                <div className='p-5'>
-                    <h1 className='text-3xl font-bold text-orange-600'>Wedding Photography Jargon,
-                        <br />
-                        When Dreams Come True!
+                    <h1 className='text-3xl font-bold text-orange-600'>
+                        Popular Business Names and Name Ideas for Mobile Shop
                     </h1>
                     <br/>
-                    <p><small>All good wedding studios & wedding photographers worth their salt have a good steady workload from their wedding season which they plan & manage.<br/>
-                     Their back-end work-flow is like the iceberg under the sea,
-                     you just see the tip floating above the ocean.
-                     <br/> But behind the scenes there is a lot of work that needs to be executed and for multiple clients.</small></p>
+                    <p><small>Building an identity is crucial to effective branding. If you are opening a mobile shop, giving it a unique or catchy name is necessary. Your brand's statement or tagline must be unique to attract significant attention. An excellent mobile shop name logo design conveys the company's entire identity. Two of the most effective methods to achieve this are branding and packaging. After deciding on a brand, the product is sold through several means such as online or offline. However, the foremost aspect of a business is the company's name. Therefore, some of the best names for mobile shop are highlighted in this article.</small></p>
                      <Link to='category'>
                         <button className='btn btn-outline btn-warning m-5'>
-                            category
+                            Shop Now
                         </button>
                      </Link>
                 </div>
