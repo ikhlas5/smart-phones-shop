@@ -89,7 +89,7 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Name</span></label>
-                        
+
                         <input type="text" {...register("name", {
                             required: "Name is Required"
                         })} className="input input-bordered w-full max-w-xs" />
@@ -132,7 +132,7 @@ const SignUp = () => {
                     
                 </form>
                 <p>Already have an account <Link className='text-secondary' to="/login">Please Login</Link></p>
-                <div className="divider">OR</div>
+                <div className="divider">OR</div> 
                 <button onClick={googleSingIn} className='flex items-center mx-auto btn btn-outline w-full '><FaGoogle className='mr-2'></FaGoogle>Google</button>
 
             </div>
