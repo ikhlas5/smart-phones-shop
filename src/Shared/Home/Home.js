@@ -21,7 +21,7 @@ const Home = () => {
                     </h1>
                     <br/>
                     <p><small>Building an identity is crucial to effective branding. If you are opening a mobile shop, giving it a unique or catchy name is necessary. Your brand's statement or tagline must be unique to attract significant attention. An excellent mobile shop name logo design conveys the company's entire identity. Two of the most effective methods to achieve this are branding and packaging.
-                        <br
+                        <br/>
                          After deciding on a brand, the product is sold through several means such as online or offline. However, the foremost aspect of a business is the company's name. Therefore, some of the best names for mobile shop are highlighted in this article...</small></p>
                      <Link to='category'>
                         <button className='btn btn-outline btn-warning m-5'>
